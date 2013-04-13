@@ -1,28 +1,29 @@
 #!/bin/bash
 
+# This variables can be modified to suit your needs
+# LOCATION points to a folder in the user directory in which you will store the projects. DESINATION points to the location of your local server public directory. A link will be created between this to directories and they will contain the same information.
+
+LOCATION="/home/$USER/Copy/Sites"
+DESTINATION="/var/www"
+
+# Function to create a new project. Syntax: laravel new [project name]
 function new () {
-  cd /var/www;
-  cd ~/Copy/Sites;
-  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Clonando...";
+  cd $LOCATION;
+  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Cloning into $LOCATION ... please wait.";
   git clone https://github.com/laravel/laravel.git;
   mv laravel $1;
   cd $1;
   chmod -R 777 storage; 
   cd application/tasks;
   wget https://raw.github.com/JeffreyWay/Laravel-Generator/master/generate.php;
-  ln -s ~/Copy/Sites/$1 /var/www/$1;
+  ln -s $LOCATION/$1 $DESTINATION/$1;
 
-  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Se ha creado un nuevo projecto en /var/www/"$1 ;
-}
-
-function use() {
-  USANDO="/var/www/"$1;
-  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Usando " $USANDO ;
+  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "New project created in $DESTINATION/"$1 ;
 }
 
 #Create a resource syntax: laravel r [project name] [resource name] [actions]
 function r() {
-  cd /var/www/$1;
+  cd $DESTINATION/$1;
   php artisan generate:resource $2
   DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Resource " $2 "created";
 }
