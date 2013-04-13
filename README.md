@@ -8,16 +8,25 @@ Help is welcome to acomplish this task.
 
 #What Works right now:
 
-Create new project
+##Create new project
 
     laravel new testproject
 
 This command will:
 
-- Clone a laravel instalation from github to a defined directory and rename it to testproject(change this parameter as you need).
+- Clone a laravel instalation from github to a defined directory and rename it to project_name(change this parameter as you need).
 - Create a symlink from you development directory to your local server public directory. 
 - Set the correct file permissions to the storage directory inside laravel installation.
 - Download and install laravel generators (https://github.com/JeffreyWay/Laravel-Generator)
+
+##Generate new resource
+    
+    laravel r testproject post 
+
+This commando will create:
+  - A post.php model
+  - A posts.php controller 
+  - A post views folder with index.blade.php view.
 
 #Installation
 
