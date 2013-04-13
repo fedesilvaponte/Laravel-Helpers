@@ -23,6 +23,8 @@ This command will:
 
 ###Generate new resource
 
+![Generate a new resource](https://dl.dropboxusercontent.com/u/4159593/images/laravel-helpers-dash-2.jpg)
+
     laravel r testproject post 
 
 This command will create:
@@ -61,3 +63,7 @@ I'm working to make this process more friendly, for now you need to:
 If you are using unity, simply open de run command interface (Alt+F2) and type any of the available commands.
 
 This should also work with gnome-do, synapse, krunner, and any other program that can run linux commands stored in /usr/local/bin
+
+# Configuration
+
+Change your home and local server directories in settings files
