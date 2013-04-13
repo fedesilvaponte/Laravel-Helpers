@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function create () {
+  cd /var/www;
+  cd ~/Copy/Sites;
+  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Clonando...";
+  git clone https://github.com/laravel/laravel.git;
+  mv laravel $*;
+  cd $*;
+  chmod -R 777 storage; 
+  cd application/tasks;
+  wget https://raw.github.com/JeffreyWay/Laravel-Generator/master/generate.php;
+  ln -s ~/Copy/Sites/$* /var/www/$*;
+
+  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Se ha creado un nuevo projecto";
+}
+
+$1 $2 $3 $4
