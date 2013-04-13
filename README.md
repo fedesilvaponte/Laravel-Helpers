@@ -10,16 +10,16 @@ Help is welcome to acomplish this task.
 
 Create new project
 
-    laravel new testprject
+    laravel new testproject
 
 This command will:
 
-- Clone a laravel instalation from github to a defined directory.
-- Create a symlink to your local server public directory. 
-- Set the correct file permissions to the storage directory
+- Clone a laravel instalation from github to a defined directory and create a testproject directory inside.
+- Create a symlink from you development directory to your local server public directory. 
+- Set the correct file permissions to the storage directory inside laravel installation.
 - Download and install laravel generators (https://github.com/JeffreyWay/Laravel-Generator)
 
-#Instalation
+#Installation
 
 I'm working to make this process more friendly, for now you need to:
 
