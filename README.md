@@ -10,7 +10,7 @@ Help is welcome to acomplish this task.
 
 ###Create new project
 
-[Create New Project](https://dl.dropboxusercontent.com/u/4159593/images/laravel-helpers-dash-1.jpg)
+![Create New Project](https://dl.dropboxusercontent.com/u/4159593/images/laravel-helpers-dash-1.jpg)
 
     laravel new testproject
 
