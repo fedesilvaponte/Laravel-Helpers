@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# This variables can be modified to suit your needs
-# LOCATION points to a folder in the user directory in which you will store the projects. DESINATION points to the location of your local server public directory. A link will be created between this to directories and they will contain the same information.
-
-LOCATION="/home/$USER/Copy/Sites"
-DESTINATION="/var/www"
+source ~/.fsp_laravel/settings
 
 # Function to create a new project. Syntax: laravel new [project name]
 function new () {
