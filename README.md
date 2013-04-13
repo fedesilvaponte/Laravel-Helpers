@@ -8,7 +8,7 @@ Help is welcome to acomplish this task.
 
 #What Works right now:
 
-##Create new project
+###Create new project
 
     laravel new testproject
 
@@ -19,14 +19,30 @@ This command will:
 - Set the correct file permissions to the storage directory inside laravel installation.
 - Download and install laravel generators (https://github.com/JeffreyWay/Laravel-Generator)
 
-##Generate new resource
+###Generate new resource
     
     laravel r testproject post 
 
-This commando will create:
+This command will create:
   - A post.php model
   - A posts.php controller 
   - A post views folder with index.blade.php view.
+
+###Generate assets
+
+    laravel testproject assets main.scss scripts.js
+
+This will create two files:
+
+    public/css/sass/main.scss
+    public/js/scripts.js
+
+The default directory paths are:
+
+- CSS => public/css/
+- JavaScript => public/js/
+- CoffeeScript => public/js/coffee/
+- Sass (sass or scss extension) => public/css/sass
 
 #Installation
 
