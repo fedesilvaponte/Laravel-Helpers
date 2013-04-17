@@ -9,7 +9,7 @@ function new () {
   git clone https://github.com/laravel/laravel.git;
   mv laravel $1;
   cd $1;
-  chmod -R 777 storage; 
+  chmod -R o+w storage; 
   cd application/tasks;
   wget https://raw.github.com/JeffreyWay/Laravel-Generator/master/generate.php;
   ln -s $LOCATION/$1 $DESTINATION/$1;
@@ -26,8 +26,21 @@ function r() {
 
 function assets() {
   cd $LOCATION/$1;
-  php artisan generate:assets $2 $3 $4 $5
-  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Created assets";
+  php artisan generate:assets $2 $3 $4 $5;
+  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Created assets"
 }
 
-$1 $2 $3 $4 $5
+function mig() {
+  cd $LOCATION/$1;
+  php artisan generate:migration $2 $3 $4 $5 $6
+  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "Migration created succesfully";
+}
+
+## Views
+function view() {
+  cd $LOCATION/$1;
+  php artisan generate:view $2 $3 $4 $5 $6
+  DISPLAY=:0 notify-send -i ~/.fsp_laravel/console.png "View created succesfully";
+}
+
+$1 $2 $3 $4 $5 $6 $7

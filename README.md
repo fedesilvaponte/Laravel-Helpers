@@ -34,12 +34,24 @@ This command will create:
 
 ###Generate assets
 
-    laravel testproject assets main.scss scripts.js
+    laravel assets testproject main.scss scripts.js
 
 This will create two files:
 
     public/css/sass/main.scss
     public/js/scripts.js
+
+### Generate a migration
+
+    laravel mig testproyect create_users_table id:integer name:string email:string
+
+This will create a new migration for creating user
+
+### Generate a view
+
+    laravel view testproyect home
+
+This will create a home view
 
 The default directory paths are:
 
@@ -67,3 +79,5 @@ This should also work with gnome-do, synapse, krunner, and any other program tha
 # Configuration
 
 Change your home and local server directories in settings files
+
+For more information on the use of this generators and it's posibilities please go to [laravel generators](https://github.com/JeffreyWay/Laravel-Generator) 
