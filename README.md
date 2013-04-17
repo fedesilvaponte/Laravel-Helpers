@@ -8,6 +8,12 @@ Help is welcome to acomplish this task.
 
 #What Works right now:
 
+- [Create new project](#create-new-project)
+- [Generate a resource](#generate-new-resource) 
+- [Generate assets](#generate-assets)
+- [Genertate a migration](#generate-a-migration)
+- [Generate a view](#generate-a-view) 
+
 ###Create new project
 
 ![Create New Project](https://dl.dropboxusercontent.com/u/4159593/images/laravel-helpers-dash-1.jpg)
